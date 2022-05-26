@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- JQuery & JqueryUI.js Jquery.css -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+      integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom css -->
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <!-- Custom javascript -->
+    <script type="text/javascript" src="../static/js/main.js"></script>
+
+    <title>Astrodia Flight Search Results</title>
+  </head>
+  <body>
+    <div class="main container">
+      <div class="row">
+        Search flight form placeholder with search details prefilled
+      </div>
+      <!-- Start: Sidebar for narrowing selection -->
+      <div class="row">
+        <div class="search-result-filters col-3 border">
+          <h1 class="">Filter by 1</h1>
+          <h2 class="">Filter by 2</h2>
+          <h3 class="">Filter by 3</h3>
+          <h4 class="">Filter by 4</h4>
+          <h5 class="">Filter by 5</h5>
+          <h6 class="">Filter by 6</h6>
+          <div class="row">
+            <div class="col-9">
+              <h5>Spaceports</h5>
+            </div>
+            <div class="col-3">
+              <h5>From</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-9">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                  checked
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  SpaceX
+                </label>
+              </div>
+            </div>
+            <div class="col-3">$300</div>
+          </div>
+          <div class="row">
+            <div class="col-9">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  BlueOrigin
+                </label>
+              </div>
+            </div>
+            <div class="col-3">$450</div>
+          </div>
+        </div>
+        <!-- End: Sidebar for narrowing selection -->
+        <!-- Start: Search results flight list  -->
+        <div class="container flight-search-results-container col-9 border">
+          <div class="row listview-flight-details p-2">
+            <div class="col-5">
+              <h4 class="fw-bold">6:00am - 8:30pm</h4>
+              <h5>Flight #####</h5>
+              <p>
+                Moon Port (moon) - Mars Port (mars)<br />
+                <img
+                  src="../static/images/SpaceX_logo_black_Space_X.png"
+                  alt=""
+                  style="height: 10px"
+                />
+                SpaceX Liners
+              </p>
+            </div>
+            <div class="col-4">
+              <p>60d 40m(1 stop)<br />Earth Orbit(EORb)</p>
+            </div>
+            <div class="col">
+              <h6 style="color: red">2 left</h6>
+              <h5 class="fw-bold">$40000</h5>
+              <span class="d-flex"
+                ><img id="bitcoin-symbol" src="../static/images/Btc-sans.png" />
+                <h5 class="fw-bold">2300</h5>
+              </span>
+            </div>
+          </div>
+          <div class="row listview-flight-details p-2">
+            <div class="col-5">
+              <h4 class="fw-bold">6:00am - 8:30pm</h4>
+              <h5>Flight #####</h5>
+              <p>
+                Moon Port (moon) - Mars Port (mars)<br />
+                <img
+                  src="../static/images/Blue_Origin_Logo_1200_X_180.png"
+                  alt=""
+                  style="height: 10px"
+                />
+                Blue Origin
+              </p>
+            </div>
+            <div class="col-4">
+              <p>60d 40m(1 stop)<br />Earth Orbit(EORb)</p>
+            </div>
+            <div class="col">
+              <h6 style="color: red">2 left</h6>
+              <h5 class="fw-bold">$40000</h5>
+              <span class="d-flex"
+                ><img id="bitcoin-symbol" src="../static/images/Btc-sans.png" />
+                <h5 class="fw-bold">2300</h5>
+              </span>
+            </div>
+          </div>
+          <div class="row listview-flight-details p-2">
+            <div class="col-5">
+              <h4 class="fw-bold">6:00am - 8:30pm</h4>
+              <h5>Flight #####</h5>
+              <p>
+                Moon Port (moon) - Mars Port (mars)<br />
+                <img
+                  src="../static/images/virgin-galactic-logo.jpg"
+                  alt=""
+                  style="height: 40px"
+                />
+                Virgin Galactic
+              </p>
+            </div>
+            <div class="col-4">
+              <p>60d 40m(1 stop)<br />Earth Orbit(EORb)</p>
+            </div>
+            <div class="col">
+              <h6 style="color: red">2 left</h6>
+              <h5 class="fw-bold">$40000</h5>
+              <span class="d-flex"
+                ><img id="bitcoin-symbol" src="../static/images/Btc-sans.png" />
+                <h5 class="fw-bold">2300</h5>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- End: Search results flight list -->
+      </div>
+    </div>
+    <!-- Start: Flight selection detail overlay side panal -->
+    <div class="container" id="overlay">
+      <div class="row p-3 border-bottom">
+        <a href="#" class="overlay-close"></a>
+      </div>
+      <div class="row p-3 border-1 border-bottom border-dark">
+        <h3 class="fw-bold">12:27pm - 3:02pm (Nonstop)</h3>
+        <p>SpaceX</p>
+        <br />
+        <p><span class="fw-bold">12:34pm-3:02pm</span><br />3h 24m(Nonstop)</p>
+      </div>
+      <div class="row p-3">
+        <h5 class="m-0">Selected fare to Moon Base</h5>
+        <p>Your selection applies to this flight only</p>
+      </div>
+      <div class="container border rounded m-2">
+        <h4 class="d-flex justify-content-between fw-bold my-0">
+          <span> $18208 dollar </span>OR
+          <span>
+            <img id="bitcoin-symbol" src="../static/images/Btc-sans.png" />
+            .033031 bitcoin</span
+          >
+        </h4>
+        <p>$23432 roundtrip for 1 traveler</p>
+        <p class="fs-6 m-0">
+          <img id="dollar-icon" src="../static/images/dollar-icon.png" />Seat
+          choice
+        </p>
+        <p class="fs-6 m-0">
+          <img
+            id="dollar-icon"
+            src="../static/images/dollar-icon.png"
+          />Cancellation
+        </p>
+        <p class="fs-6">
+          <img id="dollar-icon" src="../static/images/dollar-icon.png" />Changes
+        </p>
+      </div>
+    </div>
+
+    <div style="padding: 20px">
+      <h2>Overlay with Text</h2>
+      <button onclick="on()">Turn on overlay effect</button>
+      <button onclick="off()">Turn off overlay effect</button>
+    </div>
+    <!--Main container end-->
+    <script>
+      // Overlay effect toggle
+      function on() {
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      function off() {
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

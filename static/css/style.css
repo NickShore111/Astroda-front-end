@@ -1,0 +1,98 @@
+.main-section-form-box {
+  border-radius: 10px;
+}
+/* *,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: medium;
+}
+h1 {
+  font-size: x-large;
+}
+h2 {
+  font-size: large;
+} */
+
+p {
+  font-size: smaller;
+}
+
+#bitcoin-symbol {
+  width: 15px;
+  height: 20px;
+}
+#dollar-icon {
+  width: 15px;
+  height: auto;
+  margin-right: 5px;
+}
+#overlay {
+  position: fixed;
+  display: block;
+  width: 35%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 2;
+  box-shadow: -3px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  /* cursor: pointer; */
+}
+
+body {
+  position: relative;
+}
+/* Overlay close */
+.overlay-close {
+  position: relative;
+  right: 0px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.3;
+  border-radius: 50px;
+}
+.overlay-close:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: lightblue;
+  background-image: radial-gradient(
+    rgba(173, 214, 230, 0.4),
+    rgba(173, 214, 230, 0.6),
+    white
+  );
+}
+.overlay-close:before,
+.overlay-close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 30px;
+  width: 2px;
+  background-color: blue;
+}
+.overlay-close:before {
+  transform: rotate(45deg);
+}
+.overlay-close:after {
+  transform: rotate(-45deg);
+}
+.main-image-container {
+  position: relative;
+}
+.main-img-overlay-box {
+  font-weight: 200;
+  width: 200px;
+  color: white;
+  position: absolute;
+  top: 500px;
+  left: 600px;
+}
+.no-line-anchor {
+  text-decoration: none;
+}
