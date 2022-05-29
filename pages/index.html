@@ -62,22 +62,20 @@
       <section
         class="container-lg main-section-form-box border border-2 my-5"
       >
-        <div class="container-fluid">
           <div
             class="main-section-form-box-tabs-container border-bottom border-2"
             id="main-entrypoint-component"
             >
             <div
-              class="main-section-form-box-tabs d-flex justify-content-center flex-row flex-wrap mt-3 mb-2"
+              class="main-section-form-box-tabs d-flex justify-content-center flex-row flex-wrap align-content-stretch mt-3"
             >
-              <a class="mx-4" href="/flights">Flights</a>
-              <a class="mx-4" href="#">Things to do</a>
-              <a class="mx-4" href="#">Stays</a>
-              <a class="mx-4" href="#">Ports</a>
-              <a class="mx-4" href="#">Reviews</a>
+              <a class="mx-4 link-inactive" href="/flights"><h6>Flights</h6></a>
+              <a class="mx-4 link-active" href="#"><h6>Things to do</h6></a>
+              <a class="mx-4 link-inactive" href="#"><h6>Stays</h6></a>
+              <a class="mx-4 link-inactive" href="#"><h6>Ports</h6></a>
+              <a class="mx-4 link-inactive" href="#"><h6>Reviews</h6></a>
             </div>
           </div>
-        </div>
         <!-- Start: Form section -->
         <div class="main-section-form-container">
           <div class="d-flex flex-wrap main-section-form-choice-tabs my-4 offset-1">
@@ -141,33 +139,32 @@
       </section>
       <!-- End: Main page user interface form and search field section-->
       <!-- Start: Main image and additional content -->
-      <div class="container main-image">
-        <img class="img-fluid flex-fill rounded" src="../static/images/earth-space-station.jpg" alt="">
+      <div class="container-lg main-image">
+        <img class="img-fluid rounded" src="../static/images/earth-space-station.jpg" alt="">
         <div class="main-img-overlay-box justify-content-center text-center">
           <h4> Experience travel on an entirely new level...</h4>
           <p>Share in the experience of a lifetime</p>
           <button class="btn btn-primary">See Reviews</button>
         </div>
-
       </div>
       <!-- Start: Extra links and ad content -->
       <section class="container added-content-and-links my-4">
-        <h2 class="mb-3">Here to help keep you on the move</h2>
-        <div class="row">
-          <div class="col">
-            <div class="border border-2 rounded p-2 pb-0">
+        <h2 class="mb-3">Here to help launch you into space</h2>
+        <div class="row gy-3">
+          <div class="col-sm-4">
+            <div class="border border-2 rounded p-2 pb-0 on-the-move-link">
               <h5>Change or cancel a trip</h5>
               <p>Make updates to your itinerary or cancel a booking</p>
             </div>
           </div>
-          <div class="col">
-            <div class="border border-2 rounded p-2 pb-0">
+          <div class="col-sm-4">
+            <div class="border border-2 rounded p-2 pb-0 on-the-move-link">
               <h5>Use a credit or coupon</h5>
               <p>Apply a coupon code or credit to a new trip</p>
             </div>
           </div>
-          <div class="col">
-            <div class="border border-2 rounded p-2 pb-0">
+          <div class="col-sm-4">
+            <div class="border border-2 rounded p-2 pb-0 on-the-move-link">
               <h5>Track your refund</h5>
               <p>Check the status of a refund currently in progress</p>
             </div>

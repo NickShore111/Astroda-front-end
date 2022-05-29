@@ -34,8 +34,6 @@
     />
     <!-- Custom css -->
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
-    <!-- Custom javascript -->
-    <script type="text/javascript" src="../static/js/main.js"></script>
 
     <title>Astrodia Flight Search Results</title>
   </head>
@@ -98,7 +96,7 @@
         <!-- End: Sidebar for narrowing selection -->
         <!-- Start: Search results flight list  -->
         <div class="container flight-search-results-container col-9 border">
-          <div class="row listview-flight-details p-2">
+          <div class="row listview-flight-details p-2 my-1 flight-selected">
             <div class="col-5">
               <h4 class="fw-bold">6:00am - 8:30pm</h4>
               <h5>Flight #####</h5>
@@ -124,7 +122,9 @@
               </span>
             </div>
           </div>
-          <div class="row listview-flight-details p-2">
+          <div class="row p-1"></div>
+
+          <div class="row listview-flight-details p-2 my-1">
             <div class="col-5">
               <h4 class="fw-bold">6:00am - 8:30pm</h4>
               <h5>Flight #####</h5>
@@ -150,7 +150,9 @@
               </span>
             </div>
           </div>
-          <div class="row listview-flight-details p-2">
+          <div class="row p-1"></div>
+
+          <div class="row listview-flight-details p-2 my-1">
             <div class="col-5">
               <h4 class="fw-bold">6:00am - 8:30pm</h4>
               <h5>Flight #####</h5>
@@ -176,18 +178,24 @@
               </span>
             </div>
           </div>
+          <div class="row p-1"></div>
         </div>
         <!-- End: Search results flight list -->
       </div>
     </div>
     <!-- Start: Flight selection detail overlay side panal -->
-    <div class="container" id="overlay">
+    <div class="container" id="flight-detail-overlay">
       <div class="row p-3 border-bottom">
-        <a href="#" class="overlay-close"></a>
+        <div class="overlay-close" id="overlay-close"></div>
       </div>
       <div class="row p-3 border-1 border-bottom border-dark">
-        <h3 class="fw-bold">12:27pm - 3:02pm (Nonstop)</h3>
-        <p>SpaceX</p>
+        <h4>12:27pm - 3:02pm (Nonstop)</h4>
+        <p><img
+                  src="../static/images/SpaceX_logo_black_Space_X.png"
+                  alt=""
+                  style="height: 10px"
+                />
+        SpaceX</p>
         <br />
         <p><span class="fw-bold">12:34pm-3:02pm</span><br />3h 24m(Nonstop)</p>
       </div>
@@ -195,13 +203,12 @@
         <h5 class="m-0">Selected fare to Moon Base</h5>
         <p>Your selection applies to this flight only</p>
       </div>
-      <div class="container border rounded m-2">
-        <h4 class="d-flex justify-content-between fw-bold my-0">
-          <span> $18208 dollar </span>OR
-          <span>
-            <img id="bitcoin-symbol" src="../static/images/Btc-sans.png" />
-            .033031 bitcoin</span
-          >
+      <div class="p-3 col-lg-12 col-xxl-8 border border-2 rounded m-2">
+        <h4 class="fw-bold my-0">
+           $18208 dollar<br>OR<br>
+           <span>
+            <img id="overlay-bitcoin-symbol" src="../static/images/Btc-sans.png" />
+            .033031 bitcoin</span>
         </h4>
         <p>$23432 roundtrip for 1 traveler</p>
         <p class="fs-6 m-0">
@@ -217,29 +224,25 @@
         <p class="fs-6">
           <img id="dollar-icon" src="../static/images/dollar-icon.png" />Changes
         </p>
+        <div class="row border mx-2 mb-2"></div>
+        <div class="row m-0">
+          <div class="col-8">
+          <p>Carry-on:<br>1st checked bag:<br>2nd checked bag:</p>
+        </div>
+        <div class="col-4">
+          <p>$400 to $450<br>$200 to $250<br>$300 to $450</p>
+        </div>
+        <button class="btn btn-primary">Select</button>
       </div>
     </div>
-
-    <div style="padding: 20px">
-      <h2>Overlay with Text</h2>
-      <button onclick="on()">Turn on overlay effect</button>
-      <button onclick="off()">Turn off overlay effect</button>
-    </div>
     <!--Main container end-->
-    <script>
-      // Overlay effect toggle
-      function on() {
-        document.getElementById("overlay").style.display = "block";
-      }
 
-      function off() {
-        document.getElementById("overlay").style.display = "none";
-      }
-    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom javascript -->
+    <script type="text/javascript" src="../static/js/main.js"></script>
   </body>
 </html>

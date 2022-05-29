@@ -1,39 +1,35 @@
+body {
+  position: relative;
+}
 .main-section-form-box {
   border-radius: 10px;
 }
-/* *,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: medium;
-}
-h1 {
-  font-size: x-large;
-}
-h2 {
-  font-size: large;
-} */
-
 p {
   font-size: smaller;
 }
-
+#overlay-bitcoin-symbol {
+  width: 15px;
+  height: 20px;
+  margin-bottom: 10px;
+  margin-right: -8px;
+}
 #bitcoin-symbol {
   width: 15px;
   height: 20px;
+  margin-top: 2px;
 }
 #dollar-icon {
   width: 15px;
   height: auto;
   margin-right: 5px;
 }
-#overlay {
+
+/* ---------------------- */
+/* Start: Overlay Styling */
+#flight-detail-overlay {
   position: fixed;
-  display: block;
-  width: 35%;
+  display: none;
+  width: 100%;
   height: 100%;
   top: 0;
   right: 0;
@@ -41,11 +37,16 @@ p {
   background-color: white;
   z-index: 2;
   box-shadow: -3px 0px 10px 2px rgba(0, 0, 0, 0.2);
-  /* cursor: pointer; */
+  animation-name: slidein;
+  animation-duration: 1s;
 }
-
-body {
-  position: relative;
+@keyframes slidein {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 0;
+  }
 }
 /* Overlay close */
 .overlay-close {
@@ -82,9 +83,41 @@ body {
 .overlay-close:after {
   transform: rotate(-45deg);
 }
+/* End: Overlay styling */
+/* -------------------- */
+
 .main-image-container {
   position: relative;
 }
+
+.no-line-anchor {
+  text-decoration: none;
+}
+.on-the-move-link {
+  cursor: pointer;
+}
+.main-section-form-box-tabs a {
+  text-decoration: none;
+  color: black;
+}
+.main-section-form-box-tabs .link-inactive:hover {
+  transition: ease-in;
+  border-bottom: 2px solid black;
+}
+.main-section-form-box-tabs .link-active {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+.select-flight-details-wrapper {
+  border: none;
+  background-color: white;
+}
+.listview-flight-details:hover {
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .main-img-overlay-box {
   font-weight: 200;
   width: 200px;
@@ -92,7 +125,75 @@ body {
   position: absolute;
   top: 500px;
   left: 600px;
+  display: block;
 }
-.no-line-anchor {
-  text-decoration: none;
+
+.flight-selected {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+/* @media only screen and (min-width: 320px) and (max-width: 576px)  */
+@media screen and (max-width: 539px) {
+  .main-img-overlay-box {
+    display: none;
+  }
+  .search-result-filters {
+    display: none;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 719px) {
+  .main-img-overlay-box {
+    width: 180px;
+    top: 700px;
+    left: 200px;
+  }
+  .main-img-overlay-box p {
+    display: none;
+  }
+  .search-result-filters {
+    display: none;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 959px) {
+  .main-img-overlay-box {
+    top: 700px;
+    left: 200px;
+  }
+  .main-img-overlay-box p {
+    display: none;
+  }
+  #flight-detail-overlay {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 990px) {
+  .main-img-overlay-box {
+    top: 700px;
+    left: 400px;
+  }
+  .main-img-overlay-box p {
+    display: block;
+  }
+  #flight-detail-overlay {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 991px) and (max-width: 1139px) {
+  .main-img-overlay-box {
+    top: 500px;
+    left: 400px;
+  }
+  #flight-detail-overlay {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .main-img-overlay-box {
+    top: 500px;
+    left: 400px;
+  }
+  #flight-detail-overlay {
+    width: 40%;
+  }
 }

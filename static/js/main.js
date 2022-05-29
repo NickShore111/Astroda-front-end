@@ -4,7 +4,7 @@ $(document).ready(function () {
   // });
 
   $(function () {
-    // Datepicker object start
+    // Start: Datepicker Object
     var dateFormat = "mm/dd/yy",
       from = $("#fs-departDate")
         .datepicker({
@@ -35,29 +35,24 @@ $(document).ready(function () {
       }
       return date;
     }
-  }); // Datepicker object end
-
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-  (function () {
-    "use strict";
-
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll(".needs-validation");
-
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms).forEach(function (form) {
-      form.addEventListener(
-        "submit",
-        function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-
-          form.classList.add("was-validated");
-        },
-        false
-      );
-    });
-  })();
+  }); // End: Datepicker Object JS
 });
+
+var flights = document.getElementsByClassName("listview-flight-details");
+
+for (var i = 0; i < flights.length; i++) {
+  flights[i].addEventListener("click", () => {
+    on();
+  });
+}
+
+function on() {
+  document.getElementById("flight-detail-overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("flight-detail-overlay").style.display = "none";
+}
+
+var overlayX = document.getElementById("overlay-close");
+overlayX.addEventListener("click", off);
