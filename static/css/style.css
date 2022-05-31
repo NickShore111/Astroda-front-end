@@ -1,12 +1,62 @@
-body {
-  position: relative;
-}
-.main-section-form-box {
-  border-radius: 10px;
-}
 p {
   font-size: smaller;
 }
+body {
+  position: relative;
+}
+
+/* START: index.html styling */
+
+.main-section-form-box {
+  border-radius: 10px;
+}
+.main-image-container {
+  position: relative;
+}
+.no-line-anchor {
+  text-decoration: none;
+}
+.on-the-move-link {
+  cursor: pointer;
+}
+.main-section-tab,
+.main-section-form-choice-tabs a {
+  text-decoration: none;
+  color: black;
+}
+.main-section-tab:hover {
+  color: black;
+  border-bottom: 2px solid black;
+}
+.main-section-form-box-tabs .focus {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+.main-section-form-choice-tabs a:hover {
+  background-color: rgba(0, 255, 255, 0.158);
+  border-radius: 10px;
+  color: blue;
+}
+.main-section-form-choice-tabs .focus {
+  background-color: rgba(0, 255, 255, 0.158);
+  border-radius: 10px;
+  color: blue;
+}
+
+.main-img-overlay-box {
+  font-weight: 200;
+  width: 200px;
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  display: block;
+}
+.multi-port-shuttle-number {
+  margin-bottom: -10px;
+}
+/* END: index.html styling */
+/* START: flights.html styling */
 #overlay-bitcoin-symbol {
   width: 15px;
   height: 20px;
@@ -23,9 +73,20 @@ p {
   height: auto;
   margin-right: 5px;
 }
-
-/* ---------------------- */
-/* Start: Overlay Styling */
+.select-flight-details-wrapper {
+  border: none;
+  background-color: white;
+}
+.listview-flight-details:hover {
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.flight-selected {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+/* Start: Flight details overlay styling */
 #flight-detail-overlay {
   position: fixed;
   display: none;
@@ -37,10 +98,10 @@ p {
   background-color: white;
   z-index: 2;
   box-shadow: -3px 0px 10px 2px rgba(0, 0, 0, 0.2);
-  animation-name: slidein;
+  animation-name: slideIn;
   animation-duration: 1s;
 }
-@keyframes slidein {
+@keyframes slideIn {
   from {
     right: -500px;
   }
@@ -48,7 +109,6 @@ p {
     right: 0;
   }
 }
-/* Overlay close */
 .overlay-close {
   position: relative;
   right: 0px;
@@ -83,56 +143,8 @@ p {
 .overlay-close:after {
   transform: rotate(-45deg);
 }
-/* End: Overlay styling */
-/* -------------------- */
-
-.main-image-container {
-  position: relative;
-}
-
-.no-line-anchor {
-  text-decoration: none;
-}
-.on-the-move-link {
-  cursor: pointer;
-}
-.main-section-form-box-tabs a {
-  text-decoration: none;
-  color: black;
-}
-.main-section-form-box-tabs .link-inactive:hover {
-  transition: ease-in;
-  border-bottom: 2px solid black;
-}
-.main-section-form-box-tabs .link-active {
-  color: blue;
-  border-bottom: 2px solid blue;
-}
-.select-flight-details-wrapper {
-  border: none;
-  background-color: white;
-}
-.listview-flight-details:hover {
-  border: 1px solid black;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.main-img-overlay-box {
-  font-weight: 200;
-  width: 200px;
-  color: white;
-  position: absolute;
-  top: 500px;
-  left: 600px;
-  display: block;
-}
-
-.flight-selected {
-  border: 1px solid black;
-  border-radius: 10px;
-}
-
+/* End: Flight details overlay styling */
+/* END: flights.html styling */
 /* @media only screen and (min-width: 320px) and (max-width: 576px)  */
 @media screen and (max-width: 539px) {
   .main-img-overlay-box {
@@ -146,7 +158,7 @@ p {
   .main-img-overlay-box {
     width: 180px;
     top: 700px;
-    left: 200px;
+    left: 40%;
   }
   .main-img-overlay-box p {
     display: none;
@@ -157,6 +169,7 @@ p {
 }
 @media screen and (min-width: 720px) and (max-width: 959px) {
   .main-img-overlay-box {
+    display: block;
     top: 700px;
     left: 200px;
   }
@@ -172,9 +185,6 @@ p {
     top: 700px;
     left: 400px;
   }
-  .main-img-overlay-box p {
-    display: block;
-  }
   #flight-detail-overlay {
     width: 50%;
   }
@@ -188,10 +198,19 @@ p {
     width: 45%;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1140px) and (max-width: 1399px) {
   .main-img-overlay-box {
     top: 500px;
     left: 400px;
+  }
+  #flight-detail-overlay {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .main-img-overlay-box {
+    top: 500px;
+    left: 600px;
   }
   #flight-detail-overlay {
     width: 40%;

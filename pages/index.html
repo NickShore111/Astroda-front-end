@@ -67,23 +67,24 @@
             id="main-entrypoint-component"
             >
             <div
-              class="main-section-form-box-tabs d-flex justify-content-center flex-row flex-wrap align-content-stretch mt-3"
+              class="main-section-form-box-tabs d-flex justify-content-center flex-wrap mt-3"
             >
-              <a class="mx-4 link-inactive" href="/flights"><h6>Flights</h6></a>
-              <a class="mx-4 link-active" href="#"><h6>Things to do</h6></a>
-              <a class="mx-4 link-inactive" href="#"><h6>Stays</h6></a>
-              <a class="mx-4 link-inactive" href="#"><h6>Ports</h6></a>
-              <a class="mx-4 link-inactive" href="#"><h6>Reviews</h6></a>
+              <a class="mx-4 main-section-tab focus" id="flights-tab" href="#"><h6>Flights</h6></a>
+              <a class="mx-4 main-section-tab" id="thingsToDo-tab" href="#"><h6>Things to do</h6></a>
+              <a class="mx-4 main-section-tab" id="stays-tab" href="#"><h6>Stays</h6></a>
+              <a class="mx-4 main-section-tab" id="ports-tab" href="#"><h6>Ports</h6></a>
+              <a class="mx-4 main-section-tab" id="reviews-tab" href="#"><h6>Reviews</h6></a>
             </div>
           </div>
         <!-- Start: Form section -->
         <div class="main-section-form-container">
           <div class="d-flex flex-wrap main-section-form-choice-tabs my-4 offset-1">
-            <a class="mx-4" href="#">Roundtrip</a>
-            <a class="mx-4" href="#">One-way</a>
-            <a class="mx-4" href="#">Multi-port</a>
+            <a class="mx-4 p-2 pb-1 focus" id="roundtrip" href="#"><h6>Roundtrip</h6></a>
+            <a class="mx-4 p-2 pb-1" id="one-way" href="#"><h6> One-way</h6></a>
+            <a class="mx-4 p-2 pb-1" id="multi-port" href="#"><h6> Multi-port</h6></a>
           </div>
-          <div class="row g-2 justify-content-center">
+
+          <!-- <div class="row g-2 justify-content-center" id="search-inputs">
             <div class="col-lg-3">
               <select
                 class="form-select form-select-lg mb-3"
@@ -106,27 +107,77 @@
                 <option value="3">Three</option>
               </select>
             </div>
-            <div class="col-lg-2">
-              <input
-                class="form-control form-select-lg mb-3 col"
-                type="text"
-                placeholder="Departure date"
-                id="fs-departDate"
-                aria-label="default input example"
-              />
+            <div class="col-lg-4 d-flex justify-content-center" id="date-input-container">
+
+              <div class="col-5 mx-1">
+                <input
+                  class="form-control form-select-lg mb-3 col"
+                  type="text"
+                  placeholder="Departure date"
+                  id="fs-departDate"
+                />
+              </div>
+                <!-- <div id="swap-fields-button">
+                <img style="position: absolute; width: 20px;" src="../static/images/swap-arrows.png" alt="">
+              </div>  
+              <div class="col-5 mx-1">
+                <input
+                  class="form-control form-select-lg mb-3 col"
+                  type="text"
+                  id="fs-returnDate"
+                  placeholder="Return date"
+                />
+              </div>
+          </div> --> 
+          <div class="row g-2 justify-content-center" id="search-inputs">
+            <div class="row p-0">
+              <div class="col offset-1 multi-port-shuttle-number"><h6>Shuttle 1</h6></div>
             </div>
-              <!-- <div id="swap-fields-button">
-              <img style="position: absolute; width: 20px;" src="../static/images/swap-arrows.png" alt="">
-            </div> -->
-            <div class="col-lg-2">
-              <input
-                class="form-control form-select-lg mb-3 col"
-                type="text"
-                id="fs-returnDate"
-                placeholder="Return date"
-                aria-label="default input example"
-              />
+            <div class="col-lg-3">
+              <select
+                class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example"
+              >
+                <option selected>Leaving from</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
             </div>
+            <div class="col-lg-3">
+              <select
+                class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example"
+              >
+                <option selected>Going to</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center" id="date-input-container">
+
+              <div class="col-5 mx-1">
+                <input
+                  class="form-control form-select-lg mb-3 col"
+                  type="text"
+                  placeholder="Departure date"
+                  id="fs-departDate"
+                />
+              </div>
+                <!-- <div id="swap-fields-button">
+                <img style="position: absolute; width: 20px;" src="../static/images/swap-arrows.png" alt="">
+              </div>  -->
+              <div class="col-5 mx-1">
+                <input
+                  class="form-control form-select-lg mb-3 col"
+                  type="text"
+                  id="fs-returnDate"
+                  placeholder="Return date"
+                />
+              </div>
+          </div>
+
           </div>
           <div class="d-flex justify-content-center">
             <button
@@ -149,7 +200,7 @@
       </div>
       <!-- Start: Extra links and ad content -->
       <section class="container added-content-and-links my-4">
-        <h2 class="mb-3">Here to help launch you into space</h2>
+        <h2 class="mb-3">Here to help launch you into your next adventure</h2>
         <div class="row gy-3">
           <div class="col-sm-4">
             <div class="border border-2 rounded p-2 pb-0 on-the-move-link">
