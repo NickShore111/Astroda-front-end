@@ -6,7 +6,6 @@ body {
 }
 
 /* START: index.html styling */
-
 .main-section-form-box {
   border-radius: 10px;
 }
@@ -48,9 +47,12 @@ body {
   width: 200px;
   color: white;
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 30%;
-  display: block;
+  display: none;
+}
+.main-img-overlay-box p {
+  display: none;
 }
 .multi-port-shuttle-number {
   margin-bottom: -10px;
@@ -143,74 +145,25 @@ body {
 .overlay-close:after {
   transform: rotate(-45deg);
 }
+.search-result-filters {
+  display: none;
+}
 /* End: Flight details overlay styling */
 /* END: flights.html styling */
-/* @media only screen and (min-width: 320px) and (max-width: 576px)  */
-@media screen and (max-width: 539px) {
-  .main-img-overlay-box {
-    display: none;
-  }
-  .search-result-filters {
-    display: none;
-  }
-}
-@media screen and (min-width: 540px) and (max-width: 719px) {
-  .main-img-overlay-box {
-    width: 180px;
-    top: 700px;
-    left: 40%;
-  }
-  .main-img-overlay-box p {
-    display: none;
-  }
-  .search-result-filters {
-    display: none;
-  }
-}
-@media screen and (min-width: 720px) and (max-width: 959px) {
+@media screen and (min-width: 539px) {
   .main-img-overlay-box {
     display: block;
-    top: 700px;
-    left: 200px;
   }
-  .main-img-overlay-box p {
+  .search-result-filters {
     display: none;
   }
-  #flight-detail-overlay {
-    width: 70%;
-  }
 }
-@media screen and (min-width: 960px) and (max-width: 990px) {
-  .main-img-overlay-box {
-    top: 700px;
-    left: 400px;
+@media screen and (min-width: 940px) {
+  .main-img-overlay-box p {
+    display: block;
   }
-  #flight-detail-overlay {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 991px) and (max-width: 1139px) {
-  .main-img-overlay-box {
-    top: 500px;
-    left: 400px;
-  }
-  #flight-detail-overlay {
-    width: 45%;
-  }
-}
-@media screen and (min-width: 1140px) and (max-width: 1399px) {
-  .main-img-overlay-box {
-    top: 500px;
-    left: 400px;
-  }
-  #flight-detail-overlay {
-    width: 40%;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .main-img-overlay-box {
-    top: 500px;
-    left: 600px;
+  .search-result-filters {
+    display: block;
   }
   #flight-detail-overlay {
     width: 40%;

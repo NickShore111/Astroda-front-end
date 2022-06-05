@@ -1,3 +1,9 @@
+import {
+  roundtripInputHTML,
+  multiportInputHTML,
+  onewayInputHTML,
+} from "./inputFlightsHTML.js";
+
 $(document).ready(function () {
   // $(this).click(function () {
   //   console.log("main.js loaded");
@@ -49,8 +55,15 @@ const removeFocus = function (element, elements) {
     }
   }
 };
+// ==============================================================
 // START: index.html vanilla Javascript
-// Start: main-section-form-box-tabs onlick underline element
+
+const inputFeildsContainer = document.querySelector(".input-fields-container");
+
+window.onload = () => {
+  inputFeildsContainer.innerHTML = roundtripInputHTML;
+};
+// Start: main-section-form-box-tabs onlick focus element
 const formTabs = document.getElementsByClassName("main-section-tab");
 
 for (const formTab of formTabs) {
@@ -60,7 +73,8 @@ for (const formTab of formTabs) {
   });
 }
 // End: main-section-form-box-tabs onclick underline element
-// Start: main-section-form-choice-tabs onclick select background element
+
+// Start: main-section-form-choice-tabs onclick focus element and populate input fields
 const choiceTabs = document.querySelectorAll(
   ".main-section-form-choice-tabs a"
 );
@@ -69,71 +83,15 @@ for (const choiceTab of choiceTabs) {
   choiceTab.addEventListener("click", () => {
     addFocus(choiceTab);
     removeFocus(choiceTab, choiceTabs);
-    var dateContainer = document.getElementById("date-input-container");
 
-    // modify form for Roundtrip search
-    if (
-      choiceTab.id == "roundtrip" &&
-      document.querySelector("#fs-returnDate") == null
-    ) {
-      console.log("missing node");
-      var returnInput = document.createElement("input");
-      // Create return-date input element with div and append to dateContainer
-      returnInput.className = "form-control form-select-lg mb-3 col";
-      returnInput.type = "text";
-      returnInput.id = "fs-returnDate";
-      returnInput.placeholder = "Return date";
-      var divForReturnInput = document.createElement("div");
-      divForReturnInput.className = "col-5 mx-1";
-      divForReturnInput.appendChild(returnInput);
-      dateContainer.appendChild(divForReturnInput);
-      dateContainer.children[0].className = "col-5 mx-1";
+    if (document.getElementById("roundtrip").classList.contains("focus")) {
+      inputFeildsContainer.innerHTML = roundtripInputHTML;
+    } else if (document.getElementById("one-way").classList.contains("focus")) {
+      inputFeildsContainer.innerHTML = onewayInputHTML;
+    } else {
+      inputFeildsContainer.innerHTML = multiportInputHTML;
     }
-
-    // modify form for One-way search
-    if (
-      choiceTab.id == "one-way" &&
-      document.querySelector("#fs-returnDate") != null
-    ) {
-      // remove return input element
-      dateContainer.children[1].remove();
-      dateContainer.children[0].className = "col-10";
-    }
-
-    // modify form for Multi-port search
   });
 }
 // End: main-section-form-choice-tabs onclick select background element
 // END:  index.html vanilla Javascript
-
-// Start: flights.html flight details overlay
-const flights = document.getElementsByClassName("listview-flight-details");
-
-for (const flight of flights) {
-  flight.addEventListener("click", () => {
-    on();
-    if (!flight.classList.contains("flight-selected")) {
-      flight.className = flight.className.concat(" flight-selected");
-      // TODO: run method createFlightInlay using flight details
-      // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      for (const otherFlight of flights) {
-        if (!otherFlight.isSameNode(flight)) {
-          otherFlight.classList.remove("flight-selected");
-        }
-      }
-    }
-  });
-}
-
-var overlayX = document.getElementById("overlay-close");
-overlayX.addEventListener("click", off);
-
-function on() {
-  document.getElementById("flight-detail-overlay").style.display = "block";
-}
-
-function off() {
-  document.getElementById("flight-detail-overlay").style.display = "none";
-}
-
-// End: flights.html flight details overlay
