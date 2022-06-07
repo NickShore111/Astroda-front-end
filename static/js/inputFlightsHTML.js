@@ -165,5 +165,20 @@ export const multiportInputHTML = `
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="container col border">
+              <svg class="uitk-icon-medium mb-1 offset-9" 
+              aria-hidden="true" viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg" 
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg>
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+                </svg>
+              </svg>
+              Add another flight
+              </span>
+            </div>
+
+          </div>
           </form>
 `;

@@ -39,204 +39,244 @@
   </head>
   <body>
     <div class="main container">
-      <div class="row">
-        Search flight form placeholder with search details prefilled
-      </div>
-      <!-- Start: Sidebar for narrowing selection -->
-      <div class="row">
-        <div class="search-result-filters col-3 border">
-          <h1 class="">Filter by 1</h1>
-          <h2 class="">Filter by 2</h2>
-          <h3 class="">Filter by 3</h3>
-          <h4 class="">Filter by 4</h4>
-          <h5 class="">Filter by 5</h5>
-          <h6 class="">Filter by 6</h6>
-          <div class="row">
-            <div class="col-9">
-              <h5>Spaceports</h5>
-            </div>
-            <div class="col-3">
-              <h5>From</h5>
-            </div>
+      <div class="row border">
+        <div class="col-2 border">
+          <h4>Filter by</h4>
+          <h5>Departure Date</h5>
+          <input
+            class="form-control form-select-sm mb-3 col hasDatepicker"
+            type="text"
+            placeholder="departing"
+            id="fs-departDate"
+          />
+          <h5>Arriving Date</h5>
+          <input
+            class="form-control form-select-sm mb-3 col hasDatepicker"
+            type="text"
+            placeholder="arriving"
+            id="fs-departDate"
+          />
+          <h5>Spaceliner</h5>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Default checkbox
+            </label>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                  checked
-                />
-                <label class="form-check-label" for="flexCheckDefault">
-                  SpaceX
-                </label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckChecked"
+              checked
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Checked checkbox
+            </label>
+          </div>
+          <h5>Region</h5>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Default checkbox
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckChecked"
+              checked
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Checked checkbox
+            </label>
+          </div>
+          <h5>Port</h5>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Default checkbox
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckChecked"
+              checked
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Checked checkbox
+            </label>
+          </div>
+          <h5>Departure Port</h5>
+          <h5>Arriving Port</h5>
+        </div>
+        <div class="col">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Flight #</th>
+                <th scope="col">From</th>
+                <th scope="col">Departing</th>
+                <th scope="col">To</th>
+                <th scope="col">Arriving</th>
+                <th scope="col">Shuttle</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="admin-flight-tr"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <th scope="row">AMD12345</th>
+                <td>MoonBase</td>
+                <td>01/01/2000 11:00:00</td>
+                <td>EarthBase</td>
+                <td>01/01/2000 11:00:00</td>
+                <td>Galileo</td>
+                <td><a href="#">Delete</a></td>
+              </tr>
+              <tr
+                class="admin-flight-tr"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <th scope="row">AMD12345</th>
+                <td>MoonBase</td>
+                <td>01/01/2000 11:00:00</td>
+                <td>EarthBase</td>
+                <td>01/01/2000 11:00:00</td>
+                <td>Galileo</td>
+                <td><a href="#">Delete</a></td>
+              </tr>
+              <tr
+                class="admin-flight-tr"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <th scope="row">AMD12345</th>
+                <td>MoonBase</td>
+                <td>01/01/2000 11:00:00</td>
+                <td>EarthBase</td>
+                <td>01/01/2000 11:00:00</td>
+                <td>Galileo</td>
+                <td><a href="#">Delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Modal -->
+          <div
+            class="modal fade modal-dialog modal-dialog-centered"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Flight12345
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body" id="admin-edit-flight-form">
+
+                    <div class="container px-2">
+                      <div class="input-group mb-3">
+
+                      <label class="input-group-text" for="inputGroupSelect01">Shuttle</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Choose...</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+
+                      <h5>Departing</h5>
+                      <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Port</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Choose...</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Date</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                        <span class="input-group-text">Time</span>
+                        <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                      </div>
+                      <h5>Arriving</h5>
+                      <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Port</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Choose...</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Date</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                        <span class="input-group-text">Time</span>
+                        <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                      </div>
+                    </div>
+
+                  
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    Save changes
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="col-3">$300</div>
           </div>
-          <div class="row">
-            <div class="col-9">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                />
-                <label class="form-check-label" for="flexCheckDefault">
-                  BlueOrigin
-                </label>
-              </div>
-            </div>
-            <div class="col-3">$450</div>
-          </div>
-        </div>
-        <!-- End: Sidebar for narrowing selection -->
-        <!-- Start: Search results flight list  -->
-        <div class="container flight-search-results-container col-9 border">
-          
-          <div class="row listview-flight-details p-2 my-1">
-            <div class="col-12 col-sm-5">
-              <h4 class="fw-bold">6:00am - 8:30pm</h4>
-              <h5>Flight #####</h5>
-              <p>
-                Moon Port (moon) - Mars Port (mars)<br />
-                <img
-                  src="../static/images/SpaceX_logo_black_Space_X.png"
-                  alt=""
-                  style="height: 10px"
-                />
-                SpaceX Liners
-              </p>
-            </div>
-            <div class="col-6 col-sm-4">
-              <p>60d 40m(1 stop)<br />Earth Orbit(EORb)</p>
-            </div>
-            <div class="col">
-              <h6 style="color: red">2 left</h6>
-              <h5 class="fw-bold">$40000</h5>
-              <span class="d-flex"
-                ><img id="bitcoin-symbol" src="../static/images/Btc-sans.png" />
-                <h5 class="fw-bold">2300</h5>
-              </span>
-            </div>
-          </div>
-          <div class="row p-1"></div>
+          <!-- End Modal -->
 
-          <div class="row listview-flight-details p-2 my-1">
-            <div class="col-12 col-sm-5">
-              <h4 class="fw-bold">6:00am - 8:30pm</h4>
-              <h5>Flight #####</h5>
-              <p>
-                Moon Port (moon) - Mars Port (mars)<br />
-                <img
-                  src="../static/images/Blue_Origin_Logo_1200_X_180.png"
-                  alt=""
-                  style="height: 10px"
-                />
-                Blue Origin
-              </p>
-            </div>
-            <div class="col-6 col-sm-4">
-              <p>60d 40m(1 stop)<br />Earth Orbit(EORb)</p>
-            </div>
-            <div class="col">
-              <h6 style="color: red">2 left</h6>
-              <h5 class="fw-bold">$40000</h5>
-              <span class="d-flex"
-                ><img id="bitcoin-symbol" src="../static/images/Btc-sans.png" />
-                <h5 class="fw-bold">2300</h5>
-              </span>
-            </div>
-          </div>
-          <div class="row p-1"></div>
-
-          <div class="row listview-flight-details p-2 my-1">
-            <div class="col-12 col-sm-5">
-              <h4 class="fw-bold">6:00am - 8:30pm</h4>
-              <h5>Flight #####</h5>
-              <p>
-                Moon Port (moon) - Mars Port (mars)<br />
-                <img
-                  src="../static/images/virgin-galactic-logo.jpg"
-                  alt=""
-                  style="height: 40px"
-                />
-                Virgin Galactic
-              </p>
-            </div>
-            <div class="col-6 col-sm-4">
-              <p>60d 40m(1 stop)<br />Earth Orbit(EORb)</p>
-            </div>
-            <div class="col">
-              <h6 style="color: red">2 left</h6>
-              <h5 class="fw-bold">$40000</h5>
-              <span class="d-flex"
-                ><img id="bitcoin-symbol" src="../static/images/Btc-sans.png" />
-                <h5 class="fw-bold">2300</h5>
-              </span>
-            </div>
-          </div>
-          <div class="row p-1"></div>
         </div>
-        <!-- End: Search results flight list -->
       </div>
     </div>
-    <!-- Start: Flight selection detail overlay side panal -->
-    <div class="container" id="flight-detail-overlay">
-      <div class="row p-3 border-bottom">
-        <div class="overlay-close" id="overlay-close"></div>
-      </div>
-      <div class="row p-3 border-1 border-bottom border-dark">
-        <h4>12:27pm - 3:02pm (Nonstop)</h4>
-        <p><img
-                  src="../static/images/SpaceX_logo_black_Space_X.png"
-                  alt=""
-                  style="height: 10px"
-                />
-        SpaceX</p>
-        <br />
-        <p><span class="fw-bold">12:34pm-3:02pm</span><br />3h 24m(Nonstop)</p>
-      </div>
-      <div class="row p-3">
-        <h5 class="m-0">Selected fare to Moon Base</h5>
-        <p>Your selection applies to this flight only</p>
-      </div>
-      <div class="p-3 col-lg-12 col-xxl-8 border border-2 rounded m-2">
-        <h4 class="fw-bold my-0">
-           $18208 dollar<br>OR<br>
-           <span>
-            <img id="overlay-bitcoin-symbol" src="../static/images/Btc-sans.png" />
-            .033031 bitcoin</span>
-        </h4>
-        <p>$23432 roundtrip for 1 traveler</p>
-        <p class="fs-6 m-0">
-          <img id="dollar-icon" src="../static/images/dollar-icon.png" />Seat
-          choice
-        </p>
-        <p class="fs-6 m-0">
-          <img
-            id="dollar-icon"
-            src="../static/images/dollar-icon.png"
-          />Cancellation
-        </p>
-        <p class="fs-6">
-          <img id="dollar-icon" src="../static/images/dollar-icon.png" />Changes
-        </p>
-        <div class="row border mx-2 mb-2"></div>
-        <div class="row m-0">
-          <div class="col-8">
-          <p>Carry-on:<br>1st checked bag:<br>2nd checked bag:</p>
-        </div>
-        <div class="col-4">
-          <p>$400 to $450<br>$200 to $250<br>$300 to $450</p>
-        </div>
-        <button class="btn btn-primary">Select</button>
-      </div>
-    </div>
-    <!--Main container end-->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -244,6 +284,6 @@
       crossorigin="anonymous"
     ></script>
     <!-- Custom javascript -->
-    <!-- <script type="text/javascript" src="../static/js/flights.js"></script> -->
+    <script type="text/javascript" src="../static/js/flights_admin.js"></script>
   </body>
 </html>

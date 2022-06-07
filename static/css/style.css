@@ -83,6 +83,10 @@ body {
   background-color: #0d6dfd28;
   cursor: pointer;
 }
+.uitk-icon-medium {
+  height: 20px;
+  color: blue;
+}
 /* END: index.html styling */
 /* START: flights.html styling */
 #overlay-bitcoin-symbol {
@@ -176,6 +180,11 @@ body {
 }
 /* End: Flight details overlay styling */
 /* END: flights.html styling */
+/* START: flights_admin.html styling */
+.admin-flight-tr:hover {
+  cursor: pointer;
+}
+/* END: flights_admin.html styling */
 @media screen and (min-width: 539px) {
   .main-img-overlay-box {
     display: block;
