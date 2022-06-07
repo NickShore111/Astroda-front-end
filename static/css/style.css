@@ -57,6 +57,32 @@ body {
 .multi-port-shuttle-number {
   margin-bottom: -10px;
 }
+#signInPopup {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 2%;
+  right: 10%;
+  width: 20rem;
+  box-shadow: 10px 10px 10px grey;
+  animation-name: signInPopup;
+  animation-duration: 0.3s;
+}
+@keyframes signInPopup {
+  from {
+    width: 12rem;
+  }
+  to {
+    width: 20rem;
+  }
+}
+#signInPopup a {
+  text-decoration: none;
+}
+#signInPopup div:hover {
+  background-color: #0d6dfd28;
+  cursor: pointer;
+}
 /* END: index.html styling */
 /* START: flights.html styling */
 #overlay-bitcoin-symbol {

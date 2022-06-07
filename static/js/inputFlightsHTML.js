@@ -80,6 +80,7 @@ export const onewayInputHTML = `
 </div>`;
 
 export const multiportInputHTML = `
+<form action="" method="GET" id="multiPortForm"> 
 <div class="row g-2 justify-content-center" id="search-inputs">
             <div class="row p-0 multi-port-shuttle-count">
               <div class="col offset-1"><h6>Shuttle 1</h6></div>
@@ -88,6 +89,9 @@ export const multiportInputHTML = `
               <select
                 class="form-select form-select-lg mb-3"
                 aria-label=".form-select-lg example"
+                id = "leavingFrom1"
+                name = "leavingFrom1"
+
               >
                 <option selected>Leaving from</option>
                 <option value="1">One</option>
@@ -99,6 +103,8 @@ export const multiportInputHTML = `
               <select
                 class="form-select form-select-lg mb-3"
                 aria-label=".form-select-lg example"
+                id = "goingTo1"
+                name = "gointTo1"
               >
                 <option selected>Going to</option>
                 <option value="1">One</option>
@@ -109,10 +115,10 @@ export const multiportInputHTML = `
             <div class="col-lg-4 d-flex justify-content-center" id="date-input-container">
               <div class="col-8 mx-1">
                 <input
-                  class="form-control form-select-lg mb-3 col"
+                  class="form-control form-select-lg mb-3 col datepicker"
                   type="text"
                   placeholder="Departure date"
-                  id="fs-departDate"
+                  id="fs-departDate1"
                 />
               </div>
             </div>
@@ -126,6 +132,8 @@ export const multiportInputHTML = `
               <select
                 class="form-select form-select-lg mb-3"
                 aria-label=".form-select-lg example"
+                id = "leavingFrom2"
+                name = "leavingFrom2"
               >
                 <option selected>Leaving from</option>
                 <option value="1">One</option>
@@ -137,6 +145,8 @@ export const multiportInputHTML = `
               <select
                 class="form-select form-select-lg mb-3"
                 aria-label=".form-select-lg example"
+                id = "goingTo2"
+                name = "goingTo2"
               >
                 <option selected>Going to</option>
                 <option value="1">One</option>
@@ -147,12 +157,13 @@ export const multiportInputHTML = `
             <div class="col-lg-4 d-flex justify-content-center" id="date-input-container">
               <div class="col-8 mx-1">
                 <input
-                  class="form-control form-select-lg mb-3 col"
+                  class="form-control form-select-lg mb-3 col datepicker"
                   type="text"
                   placeholder="Departure date"
-                  id="fs-departDate"
+                  id="fs-departDate2"
                 />
               </div>
             </div>
           </div>
+          </form>
 `;
